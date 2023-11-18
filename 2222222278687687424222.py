@@ -1,0 +1,73 @@
+
+
+class Flight:
+    def __init__(self, flight_number, flight_origin, aircraft_number, airline_name,airline_code, current_distance=0, current_speed=0, scheduled_arrival_time=None):
+        self.flight_number = flight_number
+        self.flight_origin = flight_origin
+        self.aircraft_number = airline_name
+        self.airline_code = airline_code
+        self.current_distance = current_distance
+        self.current_speed = current_speed
+        self.scheduled_arrival_time = scheduled_arrival_time
+
+
+flight1 = Flight("F1", "London","EasyJet","Airline23","TX",100, 500, "13:00")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def AirportMenu():
+    print("Airport Flight Arrival Menu")
+    print("[1] Check Flight Arrival Status")
+    print("[2] ")
+    print("[3] ")
+
+def SubMenu():
+    print("Submenu")
+    print("[1] Flights 1-3")
+    print("[2] Flights 3-5")
+
+while True:
+    AirportMenu()
+    option = int(input("Enter your choice (1/2/3:) "))
+
+    if option == 1:
+        print("Your Flight number is 5.")
+        while True:
+            SubMenu()
+            sub_choice = input("Enter your Choice:")
+            if sub_choice == 1:
+                print("'You have selected option 1.")
+    elif option == 2:
+        print("Aircraft Number")
+    elif option == 3:
+        print("Exiting the program")
+        break
+    else:
+        print("Invalid Option")
+    break
+
