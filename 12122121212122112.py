@@ -12,16 +12,16 @@ flight1.flight_status_update(155550, 600, "14:00")
 
 print(f"FLight to {flight1.flight_origin}")
 
-text = ("Planess")
 
 
-with open(testplane.txt','w'') as file:
-    file.write(text)
+#f =open("UserPlanes.txt", "x")
 
+f =open("UserPlanes.txt", "a")
+f.write("TEST Planes")
+f.close()
 
-
-
-
+f =open("UserPlanes.txt", "r")
+print(f.read())
 
 def AirportMenu():
     print("Airport Flight Arrival Menu")
