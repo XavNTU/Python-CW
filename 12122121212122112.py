@@ -10,18 +10,28 @@ flight1.flight_status_update(155550, 600, "14:00")
 
 
 
-print(f"FLight to {flight1.flight_origin}")
+#print(f"FLight to {flight1.flight_origin}")
 
 
 
 #f =open("UserPlanes.txt", "x")
 
 f =open("UserPlanes.txt", "a")
-f.write("TEST Planes")
+
+flight3 = input("enter your flight number")
+f.write(flight3)
 f.close()
 
 f =open("UserPlanes.txt", "r")
 print(f.read())
+
+flight2 = Flight(flight3, "London","EasyJet","Airline23","TX",100, 500, "13:00")
+
+
+print(f"flighty {flight2.flight_number}")
+
+
+
 
 def AirportMenu():
     print("Airport Flight Arrival Menu")
