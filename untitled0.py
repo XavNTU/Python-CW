@@ -45,7 +45,7 @@ def SubMenu():
 
 def FlightMenu():
     print("Flights")
-    print("Flight To New York")
+    print("[1]Flight To New York")
 
 while True:
     AirportMenu()
@@ -58,6 +58,9 @@ while True:
             
             if sub_choice == '1':
                 FlightMenu()
+                flight_choice = input("Enter your Choice:")
+                if flight_choice =='1':
+                    print(f"FLight to {flight1.flight_origin}")
             elif sub_choice == '2':
                 print("shussh")
             elif sub_choice == '3':
