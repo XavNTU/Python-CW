@@ -78,3 +78,20 @@ while True:
     else:
         print("Invalid Option")
     break
+
+from qwe import Flight
+
+def read_flights_from_file(filename):
+    flights = []
+    with open(filename, 'r') as file:
+        for line in file:
+            flight_info = eval(line.strip())
+            flight = Flight(*flight_info)
+            flights.append(flight)
+    return flights
+
+# Example usage of reading flights from a file
+flights = read_flights_from_file('flights.txt')
+
+for flight in flights:
+    print(f"Flight {flight.flight_number} to {flight.flight_origin} at {flight.departure_time}")
