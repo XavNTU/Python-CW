@@ -14,12 +14,4 @@ def read_flights_from_file(flights123):
     with open(flights123, 'r') as file:
         for line in file:
             flight_info = eval(line.strip())
-            flight = Flight(*flight_info)
-            flights.append(flight)
-    return flights
 
-
-flights = read_flights_from_file('flights123.txt')
-
-for flight in flights:
-    print(f"Flight {flight.flight_number} to {flight.flight_origin} at {flight.departure_time}")
